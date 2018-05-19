@@ -18,9 +18,9 @@ public abstract class Pizza {
     public enum Topping {
         HAM, MUSHROOM, ONION, PEPPER, SAUSAGE
     }
-
-    final Set<Topping> toppings;
     
+    final Set<Topping> toppings;
+      
     Pizza(Builder<?> builder) {
 
         toppings = builder.toppings.clone(); // See Item  50
@@ -30,7 +30,7 @@ public abstract class Pizza {
     abstract static class Builder<T extends Builder<T>> {
 
         EnumSet<Topping> toppings = EnumSet.noneOf(Topping.class);
-
+      
         public T addTopping(Topping topping) {
 
             toppings.add(Objects.requireNonNull(topping));
