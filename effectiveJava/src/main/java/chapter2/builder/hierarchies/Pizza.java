@@ -5,6 +5,7 @@
  */
 package chapter2.builder.hierarchies;
 
+import com.google.gson.annotations.SerializedName;
 import java.util.EnumSet;
 import java.util.Objects;
 import java.util.Set;
@@ -16,7 +17,8 @@ import java.util.Set;
 public abstract class Pizza {
 
     public enum Topping {
-        HAM, MUSHROOM, ONION, PEPPER, SAUSAGE
+      @SerializedName("LazyHAM")  HAM, MUSHROOM, ONION, PEPPER,   
+      @SerializedName("LazySAUSAGE")SAUSAGE
     }
     
     final Set<Topping> toppings;
