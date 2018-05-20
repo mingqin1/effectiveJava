@@ -16,7 +16,7 @@ import java.util.Set;
  */
 public abstract class Pizza {
 
-    static enum Topping {
+    public enum Topping {
       @SerializedName("LazyHAM")  HAM, MUSHROOM, ONION, PEPPER,   
       @SerializedName("LazySAUSAGE")SAUSAGE
     }
@@ -31,7 +31,7 @@ public abstract class Pizza {
 
     abstract static class Builder<T extends Builder<T>> {
 
-        EnumSet<Topping> toppings = EnumSet.noneOf(Topping.class);
+       private EnumSet<Topping> toppings = EnumSet.noneOf(Topping.class);
       
         public T addTopping(Topping topping) {
 
