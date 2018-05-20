@@ -16,7 +16,7 @@ import java.util.Set;
  */
 public abstract class Pizza {
 
-    public enum Topping {
+    static enum Topping {
       @SerializedName("LazyHAM")  HAM, MUSHROOM, ONION, PEPPER,   
       @SerializedName("LazySAUSAGE")SAUSAGE
     }
