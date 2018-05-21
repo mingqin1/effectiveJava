@@ -5,10 +5,11 @@
  */
 package chapter2.builder.hierarchies;
 
-import static chapter2.builder.hierarchies.NyPizza.Size.SMALL;
+
 import static chapter2.builder.hierarchies.Pizza.Topping.HAM;
 import static chapter2.builder.hierarchies.Pizza.Topping.ONION;
 import static chapter2.builder.hierarchies.Pizza.Topping.SAUSAGE;
+import static chapter2.builder.hierarchies.Size.SMALL;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
