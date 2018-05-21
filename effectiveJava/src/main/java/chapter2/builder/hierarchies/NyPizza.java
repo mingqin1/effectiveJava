@@ -12,13 +12,15 @@ import java.util.Objects;
  * @author Ming
  */
 public class NyPizza extends Pizza {
-    //public enum Size { SMALL, MEDIUM, LARGE }
-    private final Size size;
+    public enum Size { SMALL, MEDIUM, LARGE }
+    private Size size;
     
      private NyPizza(Builder builder) {
         super(builder);
         size = builder.size;
     }
+
+    
 
     public static class Builder extends Pizza.Builder<Builder> {
 

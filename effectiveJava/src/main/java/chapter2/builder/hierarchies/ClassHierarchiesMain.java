@@ -6,10 +6,11 @@
 package chapter2.builder.hierarchies;
 
 
+import static chapter2.builder.hierarchies.NyPizza.Size.SMALL;
 import static chapter2.builder.hierarchies.Pizza.Topping.HAM;
 import static chapter2.builder.hierarchies.Pizza.Topping.ONION;
 import static chapter2.builder.hierarchies.Pizza.Topping.SAUSAGE;
-import static chapter2.builder.hierarchies.Size.SMALL;
+
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -30,10 +31,14 @@ public class ClassHierarchiesMain {
         NyPizza pizza = new NyPizza.Builder(SMALL)
                 .addTopping(SAUSAGE).addTopping(ONION).build();
         
+        
         String json = gson.toJson(pizza);
 	System.out.println(json);
         
         NyPizza pizza2=gson.fromJson(json, NyPizza.class);
+        
+        String json2 = gson.toJson(pizza2);
+        System.out.println(json2);
         
        
 
@@ -41,7 +46,7 @@ public class ClassHierarchiesMain {
                 .addTopping(HAM).sauceInside().build();
         
         json = gson.toJson(calzone);
-	System.out.println(json);
+	//System.out.println(json);
     }
 
 }
